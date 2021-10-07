@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SHAVI | FOR DELING AV ELEKTISKE KJØRETØY</title>
     <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <style>
+        #map{
+            height: 580px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -44,7 +52,7 @@
                 <option value="forde">Førde</option>
             </select>
             <div id="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3218569.038660266!2d8.013921381692095!3d61.211088212024386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x461268458f4de5bf%3A0xa1b03b9db864d02b!2sNorway!5e0!3m2!1sen!2sno!4v1631924310650!5m2!1sen!2sno" width="900" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                
             </div>
         </div>
         <section>
@@ -92,5 +100,26 @@
             <p>Opphavsrett SHAVI &copy; 2021</p>
         </div>
     </footer>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    <script>
+        var map = L.map('map').setView([60.4, 8.4], 7);
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            minZoom: 7,
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1,
+            bounds: [[62.493362, 3.403816],[58.567747, 15.164794]],
+            accessToken: 'pk.eyJ1IjoicmFuYTE5MjYiLCJhIjoiY2l1aWJudGxpMDA1eTJ1bGwwYnl1bGVnNiJ9.gy_wUY3u3q76rIpfICdfRQ'
+        }).addTo(map);
+        map.setMaxBounds(map.getBounds());
+        
+        L.marker([59.90986575304959, 10.726450606945129]).addTo(map);//oslo
+        L.marker([60.38154003563324, 5.329989669622447]).addTo(map);//bergen
+        L.marker([61.45840280666341, 5.845483798503867]).addTo(map);//førde
+
+    </script>
 </body>
 </html>
