@@ -100,6 +100,7 @@
             <p>Opphavsrett SHAVI &copy; 2021</p>
         </div>
     </footer>
+    <script src="js/stations.js"></script>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
@@ -115,11 +116,31 @@
             accessToken: 'pk.eyJ1IjoicmFuYTE5MjYiLCJhIjoiY2l1aWJudGxpMDA1eTJ1bGwwYnl1bGVnNiJ9.gy_wUY3u3q76rIpfICdfRQ'
         }).addTo(map);
         map.setMaxBounds(map.getBounds());
-        
-        L.marker([59.90986575304959, 10.726450606945129]).addTo(map);//oslo
-        L.marker([60.38154003563324, 5.329989669622447]).addTo(map);//bergen
-        L.marker([61.45840280666341, 5.845483798503867]).addTo(map);//førde
 
+        map.scrollWheelZoom.disable();
+
+        function getDirections(coords) {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(loc => {
+                    window.open(
+                        `https://maps.google.com/?saddr=${[loc.coords.latitude,loc.coords.longitude]}&daddr=${coords}`,
+                        'Google maps'
+                    );
+                });
+
+            } else { 
+                alert("Geolocation is not supported by this browser.");
+            }
+        }
+        
+        stations.forEach(station => {
+            L.marker(station.coords).bindPopup(
+                `<div>
+                    <a href="utlansteder.html#${station.city}"><b>${station.name}</b></a>
+                    <button onclick="getDirections([${station.coords}])">Get direction</button>
+                </div>`
+            ).addTo(map);
+        });
     </script>
 </body>
 </html>
