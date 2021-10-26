@@ -45,15 +45,11 @@
             </div>
         </section>
         <div>
-            <select name="select-area" id="selected-area">
+            <label for="select-area">Velg område</label>
+            <select name="select-area" id="select-area" >
                 <option value="all">All</option>
-                <option value="oslo">Oslo</option>
-                <option value="bergen">Bergen</option>
-                <option value="forde">Førde</option>
             </select>
-            <div id="map">
-                
-            </div>
+            <div id="map"></div>
         </div>
         <section>
             <h2>Våre biler og båter</h2>
@@ -119,6 +115,8 @@
 
         map.scrollWheelZoom.disable();
 
+        map.zoomControl.setPosition('bottomright');
+
         function getDirections(coords) {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(loc => {
@@ -133,14 +131,31 @@
             }
         }
         
-        stations.forEach(station => {
-            L.marker(station.coords).bindPopup(
-                `<div>
-                    <a href="utlansteder.html#${station.city}"><b>${station.name}</b></a>
-                    <button onclick="getDirections([${station.coords}])">Get direction</button>
-                </div>`
-            ).addTo(map);
+        stations.forEach(area => {
+            var selectAreaEl = document.getElementById('select-area');
+            var option = document.createElement('option');
+            option.val = area.coords;
+            option.innerHTML = area.city;
+            selectAreaEl.appendChild(option);
+            area.stations.forEach(station => {
+                L.marker(station.coords).bindPopup(
+                    `<div>
+                        <a href="utlansteder.html#${station.city}"><b>${station.name}</b></a>
+                        <button onclick="getDirections([${station.coords}])">Get direction</button>
+                    </div>`
+                ).addTo(map);
+            });
         });
+        
+        var area = document.getElementById("select-area");
+        area.onchange = ()=> {
+            var val = area.options[area.selectedIndex].val;
+            if(area.value == "all"){
+                map.setView([60.4, 8.4], 7);
+            } else {
+                map.setView(val, 11);
+            }
+        };
     </script>
 </body>
 </html>
