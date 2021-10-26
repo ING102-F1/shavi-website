@@ -1,0 +1,17 @@
+:root {
+    --main-color: #8010e0;
+    --secondary-color: #452B5A;
+    --text-color: #4a4a4a;
+    --border-color: #7ec6cc;
+    --background-color: #EEEBE9;
+    --gull-color: #FFFF66;
+} 
+@font-face {
+    font-family: Viga;
+    src: url(fonts/Viga-Regular.ttf);
+}
+body {
+    font-family: Viga, sans-serif;
+    font-size: 18px;
+    color: var(--text-color);
+}
