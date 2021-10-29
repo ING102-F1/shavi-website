@@ -15,3 +15,51 @@ body {
     font-size: 18px;
     color: var(--text-color);
 }
+.Spesifikasjoner {
+color:#7ec6cc;
+display: flex;
+
+
+}
+
+
+.bildeBil {
+    width: 1500px;
+    height: 1000px;
+}
+
+.Tabell {
+display: flex;
+width: 400px;
+height: 200px;  
+align-items: center;
+justify-content: center;
+align-self: center;
+
+
+}
+
+.Tittel {
+
+    font-size: 200%;
+    margin-left: 700px;
+    
+    color: antiquewhite;
+}
+
+.tittelBoks {
+display: flex;
+
+background-color:var(--main-color);
+
+}
+
+.Tekst2 {
+    font-size: 200%;
+    margin-left: 700px;
+}
+.Tekst {
+    color: antiquewhite;
+display: auto;
+background-color:var(--main-color);
+}
