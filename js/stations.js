@@ -7,7 +7,7 @@ var stations = [
                 name:"Aker Brygge",
                 coords: [59.90986575304959, 10.726450606945129],
                 vehicles:{
-                    cars: [{model: "TESLA Model 3 (TESLA-1)", quantity: 5}],
+                    cars: [{model: "TESLA Model 3 (TESLA-1)", quantity: 5}, {model: "Toyota", quantity: 5}],
                     boats: [{model: "Hydrolift X-22 (HYDRO-1) med Evoy Galeforce Outboard (EVOY-1)", quantity:3}]
                 },
                 description: `Sentrum - Aker brygge (tid)
