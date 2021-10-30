@@ -6,22 +6,24 @@
     --background-color: #EEEBE9;
     --gull-color: #FFFF66;
 } 
+
 @font-face {
     font-family: Viga;
     src: url(fonts/Viga-Regular.ttf);
 }
+
 body {
     font-family: Viga, sans-serif;
     font-size: 18px;
     color: var(--text-color);
 }
+
 .Spesifikasjoner {
-color:#7ec6cc;
-display: flex;
-
-
+    color:#7ec6cc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
 
 .bildeBil {
     width: 1500px;
@@ -29,37 +31,50 @@ display: flex;
 }
 
 .Tabell {
-display: flex;
-width: 400px;
-height: 200px;  
-align-items: center;
-justify-content: center;
-align-self: center;
-
-
+    display: flex;
+    width: 400px;
+    height: 200px;  
+    align-items: center;
+    justify-content: center;
+    align-self: center;
 }
 
 .Tittel {
-
     font-size: 200%;
-    margin-left: 700px;
-    
     color: antiquewhite;
 }
 
 .tittelBoks {
-display: flex;
-
-background-color:var(--main-color);
-
+    display: flex;
+    justify-content: center;
+    background-color:var(--main-color);
 }
 
 .Tekst2 {
     font-size: 200%;
-    margin-left: 700px;
+    max-width: 50%;
+    line-break: whitespace;
 }
+
 .Tekst {
     color: antiquewhite;
-display: auto;
-background-color:var(--main-color);
+    display: flex;
+    flex-direction: column;
+    background-color:var(--secondary-color);
+    width: 80%;
+    border-top-right-radius: 300px;
+    border-bottom-right-radius: 300px;
+    align-items: center;
+    justify-content: center;
+}
+
+.Tekst3 {
+    font-size: 110%;
+    margin-left: -8px;
+    text-align: left;
+}
+
+.båtBilde {
+    width: 900px;
+    height: auto;
 }
