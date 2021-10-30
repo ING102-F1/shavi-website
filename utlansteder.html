@@ -326,12 +326,7 @@
 
             /* Map settings */
             map.removeLayer(marker);
-            marker = L.marker(station.coords).bindPopup(
-                `<div>
-                    <a href="utlansteder.html#${station.city}"><b>${station.name}</b></a>
-                    <button onclick="getDirections([${station.coords}])">Get direction</button>
-                </div>`
-            ).addTo(map);
+            marker = L.marker(station.coords).addTo(map);
             map.setView(station.coords, 14);
         })();
     </script>
