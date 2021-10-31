@@ -251,6 +251,25 @@ tbody tr:last-child td:last-child {
     height: auto;
 }
 
+.card {
+    background: #fff;
+    padding: 20px 20px;
+    box-shadow: 3px 7px 14px 0px rgb(0 0 0 / 14%);
+    box-sizing: border-box;
+}
+
+.button {
+    display: block;
+    width: 115px;
+    height: 18px;
+    background: var(--secondary-color);
+    padding: 10px;
+    text-align: center;
+    color: var(--light-color);
+    font-weight: bold;
+    line-height: 18px;
+}
+
 /* footer */
 footer {
     display: grid;
