@@ -7,16 +7,123 @@
     --light-color: #EEEBE9;
     --gull-color: #FFFF66;
 } 
+
 @font-face {
     font-family: Viga;
     src: url(fonts/Viga-Regular.ttf);
 }
+
 body {
     font-family: Viga, sans-serif;
     font-size: 18px;
     color: var(--text-color);
 }
 
+
+.Spesifikasjoner {
+    color:#7ec6cc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bildeBil {
+    width: 50%;
+    height: auto;
+}
+
+.spesifikasjonTittel {
+    display: inline-block;
+    margin-bottom: -6px;
+    background-color: var(--secondary-color);
+    color: white;
+    width: fit-content;
+    padding: 8px 16px;
+    border-radius: 8px 32px 8px 8px;
+   
+}
+
+.tabellContainer {
+    box-shadow: 2px 2px 10px gray;
+    padding: 36px;
+    border-radius: 0 32px 32px 32px;
+}
+
+.Tabell {
+    background-color: white;
+    color: black;
+    border-collapse: collapse;
+    padding: 20px;
+}
+
+td {
+    padding-right: 32px;
+    padding-left: 32px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #B5ACBC;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #C4C4C4;
+}
+
+tbody tr:first-child td:first-child {
+    border-top-left-radius: 32px;
+}
+
+tbody tr:first-child td:last-child {
+    border-top-right-radius: 32px;
+}
+
+tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 32px;
+}
+
+tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 32px;
+}
+
+.Tittel {
+    font-size: 200%;
+    color: antiquewhite;
+}
+
+.tittelBoks {
+    display: flex;
+    justify-content: center;
+    background-color:var(--main-color);
+}
+
+.Tekst2 {
+    font-size: 200%;
+    max-width: 50%;
+    line-break: whitespace;
+}
+
+.Tekst {
+    color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    background-color:var(--secondary-color);
+    width: 80%;
+    border-top-right-radius: 300px;
+    border-bottom-right-radius: 300px;
+    align-items: center;
+    justify-content: center;
+}
+
+.Tekst3 {
+    font-size: 110%;
+    margin-left: -8px;
+    text-align: left;
+}
+
+.båtBilde {
+    width: 900px;
+    height: auto;
+=======
 /* footer */
 footer {
     display: grid;
@@ -71,4 +178,5 @@ footer .footer-links {
 
 footer .footer-social img {
     margin-right: 5px;
+
 }
