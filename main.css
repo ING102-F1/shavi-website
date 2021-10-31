@@ -4,6 +4,7 @@
     --text-color: #4a4a4a;
     --border-color: #7ec6cc;
     --background-color: #EEEBE9;
+    --light-color: #EEEBE9;
     --gull-color: #FFFF66;
 } 
 
@@ -17,6 +18,7 @@ body {
     font-size: 18px;
     color: var(--text-color);
 }
+
 
 .Spesifikasjoner {
     color:#7ec6cc;
@@ -121,4 +123,60 @@ tbody tr:last-child td:last-child {
 .båtBilde {
     width: 900px;
     height: auto;
+=======
+/* footer */
+footer {
+    display: grid;
+    justify-items: start;
+    justify-content: space-around;
+    align-items: stretch;
+    grid-template-columns: 1fr 2fr;
+    background: var(--secondary-color);
+    color: var(--light-color);
+    padding: 38px 140px 20px 140px;
+    font-size: 0.9rem;
+}
+footer div:first-child > * {
+    margin: 0;
+    margin-bottom: 20px;
+}
+footer .footer-links p {
+    position: absolute;
+    margin: 0;
+    bottom: 0px;
+    right: 0;
+    font-size: 0.75rem;
+}
+footer a {
+    color: inherit;
+}
+
+footer nav > ul > li > a {
+    text-decoration: none;
+}
+
+footer nav > ul > li {
+    display: block;
+    margin-bottom: 10px;
+}
+
+footer .footer-links nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer .footer-links {         
+    display: grid;
+    position: relative;
+    width: 100%;
+    grid-template-columns: 2fr 1fr 1fr;
+    align-items: center;
+    justify-items: start;
+    align-content: space-around;
+}
+
+footer .footer-social img {
+    margin-right: 5px;
+
 }
