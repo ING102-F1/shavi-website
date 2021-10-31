@@ -2,31 +2,31 @@
 		display: flex;
 	}
 	
-	nav ul {
+	header nav ul {
 		list-style-type: none;
 	}
 	
-	nav li {
+	header nav li {
 		padding: 30px;
 		text-decoration: none;
 		display: inline-block;
 	}
 	
-	nav a, h1 a {
+	header nav a, h1 a {
 		text-decoration: none;
 	}
 	
-	.dropned {
+	header .dropned {
 		display: none;
 		position: absolute;
 		background-color: #bada55;
 	}
 	
-	.drop:hover .dropned {
+	header .drop:hover .dropned {
 		display: block;	
 	}
 	
-	.dropned a {
+	header .dropned a {
 		padding: 10px 15px;
 		display: block;
 		text-align: left;
