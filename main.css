@@ -659,6 +659,9 @@ tbody tr:last-child td:last-child {
         padding: 10px;
         left: 20px;
     }
+    .leaflet-bar a.leaflet-disabled {
+        color: #4a4a4a;
+    }
 /* end of map */
 /* footer */
     footer {
