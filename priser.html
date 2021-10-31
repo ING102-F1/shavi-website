@@ -1,100 +1,10 @@
 <!DOCTYPE html>
 <html lang="nb">
     <head>
+		<meta charset="utf-8"/>
         <title>Priser</title>
-        <meta charset="utf-8"/>
-		<link rel="stylesheet" href="header.css">
         <link rel="stylesheet" href="main.css">
-        <style>
-            main {
-                margin-top: 84px; 
-            }
-            #membership-text {
-                background: var(--main-color);
-                color: var(--light-color);
-                padding: 40px 230px;
-                text-align: center;
-                margin-bottom: 80px;
-            }
 
-            #membership-plans {
-                display: flex;
-                justify-content: center;
-                align-items: stretch;
-                flex-wrap: wrap;
-                column-gap: 50px;
-                row-gap: 40px;
-                margin: 10px 10px 80px 10px;
-            }
-
-            .plan-card {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                align-items: center;
-                width: 260px;
-                min-width: 260px;
-                border: 3px solid var(--border-color);
-                border-radius: 18px;
-                text-align: center;
-                position: relative;
-                transition: transform 0.5s;
-            }
-
-            .plan-card:hover{
-                transform: scale(1.10);
-            }
-            .plan-card h4 {
-                font-size: 1.5rem;
-            }
-
-            .price-container {
-                border: 2px solid var(--secondary-color);
-                width: 150px;
-                height: 150px;
-                border-radius: 50%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                margin: auto;
-                font-size: 1.5rem;
-            }
-
-            .price-container p{
-                margin: 0;
-            }
-
-            .plan-button {
-                width: 186px;
-                background: var(--secondary-color);
-                padding: 10px;
-                text-align: center;
-                color: var(--light-color);
-                font-weight: bold;
-                line-height: 24px;
-                border: none;
-                cursor: pointer;
-            }
-
-            .plan-button:hover{
-                opacity: 0.9;
-               
-            }
-            .plan-button:active{
-                opacity: 1;
-            }
-
-            #best-value {
-                background: var(--border-color);
-                border-radius: 10px 0;
-                width: 170px;
-                color: var(--gull-color);
-                padding: 6px 0;
-                position: absolute;
-                top: -20px;
-                left: 40px;
-            }
-        </style>
     </head>
     <body>
         <header>
