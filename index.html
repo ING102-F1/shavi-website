@@ -59,11 +59,13 @@
             </div>
 		</section>
         <section>
-            <div>
-                <label for="select-area">Velg område</label>
-                <select name="select-area" id="select-area" >
-                    <option value="all">All</option>
-                </select>
+            <div style="position: relative;">
+                <div class="card" id="select-area-container">
+                    <label for="select-area">Velg område</label>
+                    <select name="select-area" id="select-area" >
+                        <option value="all">All</option>
+                    </select>
+                </div>
                 <div id="map"></div>
             </div>
         </section>
@@ -74,13 +76,13 @@
                     <a href="biler.html">
                         <div>
                             <h3>TESLA Model 3 (TESLA-1)</h3>
-                            <img class="forside-vehicle-image" src="images/tesla-s.jpeg" alt="Tesla model S" width="400">
+                            <img class="forside-vehicle-image" src="images/forside-bil.jpg" alt="Tesla model S" width="400">
                         </div>
                     </a>
                     <a href="bater.html">
                         <div>
                             <h3>Hydrolift X-22 (HYDRO-1)</h3> <!-- med Evoy Galeforce Outboard (EVOY-1) -->
-                            <img class="forside-vehicle-image" src="images/X-22.png" alt="Hydrolift X-22 (HYDRO-1)" width="400">
+                            <img class="forside-vehicle-image" src="images/forside-bat.png" alt="Hydrolift X-22 (HYDRO-1)" width="400">
                         </div>
                     </a>
                 </div>
@@ -134,28 +136,14 @@
             id: 'mapbox/streets-v11',
             tileSize: 512,
             zoomOffset: -1,
-            bounds: [[62.493362, 3.403816],[58.567747, 15.164794]],
+            bounds: [[67.510620, 2.035321],[58.567747, 15.164794]],
             accessToken: 'pk.eyJ1IjoicmFuYTE5MjYiLCJhIjoiY2l1aWJudGxpMDA1eTJ1bGwwYnl1bGVnNiJ9.gy_wUY3u3q76rIpfICdfRQ'
         }).addTo(map);
-        map.setMaxBounds(map.getBounds());
+        map.setMaxBounds([[67.510620, 2.035321],[58.567747, 15.164794]]);
 
         map.scrollWheelZoom.disable();
 
         map.zoomControl.setPosition('bottomright');
-
-        function getDirections(coords) {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(loc => {
-                    window.open(
-                        `https://maps.google.com/?saddr=${[loc.coords.latitude,loc.coords.longitude]}&daddr=${coords}`,
-                        'Google maps'
-                    );
-                });
-
-            } else { 
-                alert("Geolocation is not supported by this browser.");
-            }
-        }
         
         stations.forEach(area => {
             var selectAreaEl = document.getElementById('select-area');
@@ -163,11 +151,45 @@
             option.val = area.coords;
             option.innerHTML = area.city;
             selectAreaEl.appendChild(option);
-            area.stations.forEach(station => {
+            area.stations.forEach((station, index) => {
+                var carsTbody = document.createElement('TBODY');
+                var boatsTbody = document.createElement('TBODY');
+                for (let i = 0; i < station.vehicles.cars.length; i++) {
+                    const car = station.vehicles.cars[i];
+                    carsTbody.innerHTML += `<tr>
+                            <td>${car.model}</td>
+                            <td>${car.quantity}</td>
+                        </tr>`
+                }
+
+                for (let i = 0; i < station.vehicles.boats.length; i++) {
+                    const boat = station.vehicles.boats[i];
+                    boatsTbody.innerHTML += `<tr>
+                            <td>${boat.model}</td>
+                            <td>${boat.quantity}</td>
+                        </tr>`
+                }
                 L.marker(station.coords).bindPopup(
-                    `<div>
-                        <a href="utlansteder.html#${station.city}"><b>${station.name}</b></a>
-                        <button onclick="getDirections([${station.coords}])">Get direction</button>
+                    `<div class="station-marker-popup">
+                        <a href="utlansteder.html#${index}"><b>${station.name}</b></a>
+                        <div class="marker-table-container">
+                            <table class="marker-table">
+                                <thead><tr><th colspan="2">Biler</th></tr></thead>
+                                ${carsTbody.innerHTML}
+                            </table>
+                            <table class="marker-table">
+                                <thead><tr><th colspan="2">Boats</th></tr></thead>
+                                ${boatsTbody.innerHTML}
+                            </table>
+                            <table class="marker-table">
+                                <thead><tr><th colspan="2">chargers</th></tr></thead>
+                                <tbody>
+                                    <tr><td>Billader</td><td>${station.chargers.car}</td></tr>
+                                    <tr><td>Båtlader</td><td>${station.chargers.boat}</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <a class="getdirections-btn" href="https://www.google.com/maps/dir/?api=1&destination=${station.coords}" target="_blank">Get directions</button>
                     </div>`
                 ).addTo(map);
             });
@@ -175,6 +197,7 @@
         
         var area = document.getElementById("select-area");
         area.onchange = ()=> {
+            map.closePopup();
             var val = area.options[area.selectedIndex].val;
             if(area.value == "all"){
                 map.setView([60.4, 8.4], 7);
