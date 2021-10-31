@@ -560,6 +560,7 @@ tbody tr:last-child td:last-child {
                 line-height: 24px;
                 border: none;
                 cursor: pointer;
+				border-radius: 5px;
             }
 
             .plan-button:hover {
