@@ -137,8 +137,7 @@ body {
       }
       
       #login:hover {
-          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-          margin-bottom: 17px;
+        box-shadow: rgb(0 0 0 / 24%) 3px 12px 8px;
       }
       /* End of Login */
 	  
