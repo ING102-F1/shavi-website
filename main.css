@@ -429,6 +429,24 @@ tbody tr:last-child td:last-child {
                 margin-bottom: 80px;
             }
 
+            #membership-text-bottom {
+                background: var(--secondary-color);
+                color: var(--light-color);
+                padding: 40px 230px;
+                text-align: center;
+                margin-bottom: 60px;
+            }
+
+            #membership-text-footer {
+                color: var(--text-color);
+                text-align: center;
+                margin-bottom: 60px;
+            }
+
+            #membership-text-footer-link {
+                color: var(--text-color);
+            }
+
             #membership-plans {
                 display: flex;
                 justify-content: center;
