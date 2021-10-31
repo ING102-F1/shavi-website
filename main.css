@@ -578,6 +578,58 @@ tbody tr:last-child td:last-child {
             }
 /* End for Priser */
 
+/* map */
+.station-marker-popup {
+    color: var(--text-color);
+}
+
+.station-marker-popup a{
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.station-marker-popup .marker-table-container {
+    display: flex;
+    row-gap: 10px;
+    flex-wrap: nowrap;
+    width: 80%;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 12px;
+}
+
+.station-marker-popup .marker-table{
+    flex: row;
+}
+
+.station-marker-popup .getdirections-btn {
+    background: var(--secondary-color);
+    padding: 6px;
+    text-align: center;
+    color: var(--light-color);
+    font-weight: bold;
+    line-height: 24px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+
+.station-marker-popup .getdirections-btn:hover {
+    opacity: 0.9;
+}
+
+#select-area-container {
+    font-size: 1.2rem;
+    position: absolute;
+    top: 20px;
+    z-index: 888;
+    background: white;
+    padding: 10px;
+    left: 20px;
+}
 /* footer */
 footer {
     display: grid;
