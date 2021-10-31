@@ -23,11 +23,16 @@ body {
 
 /* Navigation */
 	/* Basics */
+	#nav {
+		margin-top: 100px;
+	}
+	
 	header {
 		display: flex;
 		background-color: var(--main-color);
 		position: fixed;
 		width: 100%;
+		top: 0;
 	}
 	
 	header a:link, a:visited {
