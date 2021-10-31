@@ -56,12 +56,16 @@ body {
 	}
 	
 	header nav li {
-		padding: 30px;
 		text-decoration: none;
 		display: inline-block;
 		border-left: 5px;
 		border-right: 5px;
 		border-color: var(--gull-color);
+	}
+	
+	header nav a {
+		padding: 30px;
+		display: inline-block;
 	}
 	
 	header nav a, h1 a {
@@ -101,8 +105,8 @@ body {
           position: absolute;
           background-color: var(--main-color);
           border-radius: 10%;
-          margin: -20px;
-          margin-top: 13px;
+          margin-left: 10px;
+          margin-top: -10px;
           padding-top: 5px;
   
       }
@@ -221,27 +225,26 @@ tbody tr:last-child td:last-child {
 }
 
 .tittelBoks {
+    margin-top: 84px;
     display: flex;
     justify-content: center;
     background-color:var(--main-color);
 }
 
 .Tekst2 {
-    font-size: 200%;
     max-width: 50%;
-    line-break: whitespace;
 }
 
 .Tekst {
-    color: antiquewhite;
-    display: flex;
+    color: var(--light-color);
     flex-direction: column;
-    background-color:var(--secondary-color);
+    background-color: var(--secondary-color);
     width: 80%;
     border-top-right-radius: 300px;
     border-bottom-right-radius: 300px;
-    align-items: center;
-    justify-content: center;
+    box-sizing: border-box;
+    padding: 44px;
+    margin-bottom: 82px;
 }
 
 .Tekst3 {
@@ -427,6 +430,26 @@ tbody tr:last-child td:last-child {
                 padding: 40px 230px;
                 text-align: center;
                 margin-bottom: 80px;
+            }
+
+            #membership-text-bottom {
+                background: var(--secondary-color);
+                color: var(--light-color);
+                padding: 40px 230px;
+                text-align: center;
+                margin-bottom: 60px;
+                padding-right: 28%;
+                padding-left: 28%;
+            }
+
+            #membership-text-footer {
+                color: var(--text-color);
+                text-align: center;
+                margin-bottom: 60px;
+            }
+
+            #membership-text-footer-link {
+                color: var(--text-color);
             }
 
             #membership-plans {
