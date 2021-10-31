@@ -10,17 +10,20 @@ var stations = [
                     cars: [{model: "TESLA Model 3 (TESLA-1)", quantity: 5}, {model: "Toyota", quantity: 5}],
                     boats: [{model: "Hydrolift X-22 (HYDRO-1) med Evoy Galeforce Outboard (EVOY-1)", quantity:3}]
                 },
-                description: `Sentrum - Aker brygge (tid)
-                gå 23 min bli 7 min
-                * buss 10-14 min
-                Buss + Trykk
-                12 Majorstuen (trykk) [Aker brygge] 54 Tjuvholmen (buss) [Vika Atrium]
-                81 Filipstad (buss) [Vika Atrium] 32 Voksen skog (buss) [Vika Atrium]
-                - man kan også ta tog til nationaltheartret også gå derfra til aker brygge.
-                Nær hotel:
-                Thon hotel vika atrium Hotel nær
-                * The theif spa
-                Rund in i Aker brygge er det mange matbruktikker og serverignsteder. Det er også toaletter er tilgjengelig. Det er flere steder rund aker brygge der man har mulighet til å parkere.`,
+                description: `I Aker Brygge er det mange matbruktikker, serverignsteder og toaletter. Det er flere parkeringsplasser i området. I nærheten finner man Thon Hotel Vika Atrium og The Thief Spa.
+
+                Avstand fra sentrum:
+                Gå: 23 min
+                Bil: 7 min
+                Buss: 10-14 min
+
+                Buss og Trikk ruter:
+                12 Majorstuen (trikk) [Aker brygge]
+                54 Tjuvholmen (buss) [Vika Atrium]
+                81 Filipstad (buss) [Vika Atrium]
+                32 Voksen Skog (buss) [Vika Atrium]
+                
+                Man kan også ta tog til nationaltheatret også gå derfra til aker brygge.`,
                 address:"Aker brygge,\n0250 Oslo",
                 img: "images/aker-brygge.png",
                 chargers: {
@@ -42,7 +45,7 @@ var stations = [
                     cars: [{model: "TESLA Model 3 (TESLA-1)", quantity: 5}],
                     boats: [{model: "Hydrolift X-22 (HYDRO-1) med Evoy Galeforce Outboard (EVOY-1)", quantity:3}]
                 },
-                description: `Marineholmen ligger ca 20 minutter med gå-avstand fra Bergen sentrum. I nærheten finner man blandt annet en del kafeer og spisesteder. Det er også veldig kort avstand til Nygårdparken og VilVite, samt Institutt for biovitenskap ved Univeristetet i Bergen og Handels Høyskolen.
+                description: `Marineholmen ligger ca 20 minutter med gå-avstand til Bergen sentrum. I nærheten finner man blandt annet en del kafeer og spisesteder. Det er også veldig kort avstand til Nygårdparken og VilVite, samt Institutt for biovitenskap ved Univeristetet i Bergen og Handels Høyskolen.
                 Det er også lett tilgang til både Bybane og Buss.
                 
                 Kollektivtransport:
