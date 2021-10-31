@@ -6,6 +6,7 @@
     --background-color: #EEEBE9;
     --light-color: #EEEBE9;
     --gull-color: #FFFF66;
+    box-shadow: rgb(30 30 30 / 10%) 3px 3px 6px 0px inset, rgb(10 10 10 / 10%) -3px -3px 6px 1px inset;
 } 
 
 @font-face {
@@ -17,8 +18,128 @@ body {
     font-family: Viga, sans-serif;
     font-size: 18px;
     color: var(--text-color);
+    margin: 0%;
 }
 
+/* Navigation */
+	/* Basics */
+	header {
+		display: flex;
+		background-color: var(--main-color);
+		position: fixed;
+		width: 100%;
+	}
+	
+	header a:link, a:visited {
+		color: white;
+		
+	}
+	
+	header nav li:hover {
+		box-shadow: rgba(50, 50, 50, 0.2) 0px -8px 8px 0px;
+	}
+	
+	header nav {
+		margin-left: 42%;
+		
+	}
+	
+	header nav ul {
+		list-style-type: none;
+		margin: 0;
+	}
+	
+	header nav li {
+		padding: 30px;
+		text-decoration: none;
+		display: inline-block;
+		border-left: 5px;
+		border-right: 5px;
+		border-color: var(--gull-color);
+	}
+	
+	header nav a, h1 a {
+		text-decoration: none;
+	}
+	/* End of Basics */
+
+    	/* Logo */
+	.shavi-logo {
+		width: 65px;
+		margin: 0;
+		height: 65px;
+		position: absolute;
+		margin-left: 26px;
+		margin-top: 4px;
+	}
+	
+	header h1 {
+		margin: 0;
+		padding-left: 80px;
+		padding-top: 18px;
+	}
+	/* End of Logo */
+
+    	/* Drop-menu */
+	#pil {
+        width: 0; 
+        height: 0; 
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 9px solid var(--border-color);
+        display: inline-block;
+      }
+      
+      .dropned {
+          display: none;
+          position: absolute;
+          background-color: var(--main-color);
+          border-radius: 10%;
+          margin: -20px;
+          margin-top: 13px;
+          padding-top: 5px;
+  
+      }
+      
+      .drop:hover .dropned {
+          display: block;	
+          
+      }
+      
+      
+      .dropned a {
+          padding: 10px 47px;
+          display: block;
+          margin: 0;
+      }
+      
+      .dropned a:hover {
+          box-shadow: rgb(30 30 30 / 10%) 3px 3px 6px 0px inset, rgb(10 10 10 / 10%) -3px -3px 6px 1px inset;
+          border-radius: 20%;
+      }
+      /* End of Drop-menu */
+      
+      /* Login */
+    #login {
+          position: absolute;
+          color: var(--text-color);
+          background-color: var(--background-color);
+          padding: 13px;
+          padding-left: 20px;
+          padding-right: 20px;
+          border-radius: 32%;
+          margin-left: 76px;
+          margin-top: 18px;
+          font-weight: bold;
+      }
+      
+      #login:hover {
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          margin-top: 17px;
+      }
+      /* End of Login */
+      
+  /* End of Navigation */
 
 .Spesifikasjoner {
     color:#7ec6cc;
@@ -123,7 +244,8 @@ tbody tr:last-child td:last-child {
 .båtBilde {
     width: 900px;
     height: auto;
-=======
+}
+
 /* footer */
 footer {
     display: grid;
@@ -136,6 +258,7 @@ footer {
     padding: 38px 140px 20px 140px;
     font-size: 0.9rem;
 }
+
 footer div:first-child > * {
     margin: 0;
     margin-bottom: 20px;

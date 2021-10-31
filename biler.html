@@ -10,23 +10,29 @@
 		</head>
 		<body>
 			<header>
-				<h1 style="padding-left: 15px;"><a href="index.html">SHAVI</a></h1>    
-				<nav>
-					<ul>
-						<li><a href="index.html">Forside</a></li>
-						<li><a href="priser.html">Priser</a></li>
-						<li class="drop">
-							<a href="javascript:void(0)">Utlånsteder</a> <!-- javascript gjør at utlånsteder ikke er en link -->
-							<div class="dropned">
-								<a href="utlansteder.html">Oslo</a>
-								<a href="utlansteder.html">Bergen</a>
-								<a href="utlansteder.html">Førde</a>
-							</div>
-						</li>
-						<li><a href="">Om oss</a></li>
-					</ul>
-				</nav>
-				<div new class="Spesifikasjoner">
+	
+				<img class="shavi-logo" src="images/SHAVI_LOGO.png">
+				<h1><a href="index.html">SHAVI</a></h1>
+				
+					<nav>
+						<ul>
+							<li><a href="index.html">Forside</a></li>
+							<li class="drop">
+								<a href="javascript:void(0)">Utlånsteder <div id="pil"></div></a>  <!-- javascript gjør at utlånsteder ikke er en link, div er for å kunne lage nedover pil med CSS -->
+								<div class="dropned"> <!-- Drop ned meny -->
+									<a href="utlansteder.html">Oslo</a>
+									<a href="utlansteder.html">Bergen</a>
+									<a href="utlansteder.html">Førde</a>
+								</div> 
+							</li>
+							<li><a href="priser.html">Priser</a></li>
+							<li><a href=".html">Om oss</a></li>
+							<a href="javascript:void(0)" id="login">Log in</a>
+						</ul>
+						
+						
+					</nav>
+				
 			</header>
 			<div class="tittelBoks">
 				<h2 class="Tittel">
