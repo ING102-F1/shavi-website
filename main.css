@@ -433,6 +433,8 @@ tbody tr:last-child td:last-child {
                 padding: 40px 230px;
                 text-align: center;
                 margin-bottom: 60px;
+                padding-right: 28%;
+                padding-left: 28%;
             }
 
             #membership-text-footer {
