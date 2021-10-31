@@ -221,28 +221,26 @@ tbody tr:last-child td:last-child {
 }
 
 .tittelBoks {
+    margin-top: 84px;
     display: flex;
     justify-content: center;
     background-color:var(--main-color);
 }
 
 .Tekst2 {
-    font-size: 200%;
     max-width: 50%;
-    line-break: whitespace;
 }
 
 .Tekst {
-    color: antiquewhite;
-    display: flex;
+    color: var(--light-color);
     flex-direction: column;
-    background-color:var(--secondary-color);
+    background-color: var(--secondary-color);
     width: 80%;
     border-top-right-radius: 300px;
     border-bottom-right-radius: 300px;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 350px;
+    box-sizing: border-box;
+    padding: 44px;
+    margin-bottom: 82px;
 }
 
 .Tekst3 {
