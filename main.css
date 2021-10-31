@@ -24,7 +24,7 @@ body {
 /* Navigation */
 	/* Basics */
 	#nav {
-		margin-top: 100px;
+		margin-top: 80px;
 	}
 	
 	header {
@@ -278,7 +278,13 @@ tbody tr:last-child td:last-child {
 }
 
 /* Utlånsteder */
-.card {
+		.city-name {
+			font-size: 5rem;
+			margin-bottom: 20px;
+			margin-top: 25px;
+		}
+
+		.card {
             background: #fff;
             padding: 20px 20px;
             box-shadow: 3px 7px 14px 0px rgb(0 0 0 / 14%);
@@ -303,11 +309,13 @@ tbody tr:last-child td:last-child {
 
         #city-header {
             display: flex;
-            height: 500px;
+            height: 600px;
             min-height: 500px;
             overflow: hidden;
             flex-direction: column;
             align-items: center;
+			background-color: var(--main-color);
+            color: var(--light-color);
         }
 
         .station-tables {
@@ -316,11 +324,6 @@ tbody tr:last-child td:last-child {
             justify-content: space-between;
             align-items: flex-start;
             height: max-content;
-        }
-
-        #city-header {
-            background-color: var(--main-color);
-            color: var(--light-color);
         }
 
         #station-address {
