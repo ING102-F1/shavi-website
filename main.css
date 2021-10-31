@@ -621,7 +621,15 @@ tbody tr:last-child td:last-child {
     opacity: 0.9;
 }
 
-
+#select-area-container {
+    font-size: 1.2rem;
+    position: absolute;
+    top: 20px;
+    z-index: 888;
+    background: white;
+    padding: 10px;
+    left: 20px;
+}
 /* footer */
 footer {
     display: grid;
